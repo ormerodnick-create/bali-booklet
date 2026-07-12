@@ -753,6 +753,7 @@
 
 <!-- NAV -->
 <nav id="nav">
+  <a href="#countdownSec">The Countdown</a>
   <a href="#exec">Exec Summary</a>
   <a href="#flights">Flight Schedule</a>
   <a href="#itinerary">Flight Itinerary</a>
@@ -763,10 +764,49 @@
   <a href="#showcase">Bali in Motion</a>
   <a href="#ideas">Research &amp; Ideas</a>
   <a href="#changi">Singapore Hotel (2)</a>
+  <a href="#language">Language</a>
   <a href="#toolkit">Trip Toolkit</a>
   <a href="#finance">Financial Summary</a>
 </nav>
 <div id="today-banner" class="today-banner" style="display:none"></div>
+
+<style>
+#countdownSec{background:linear-gradient(180deg,var(--parch),var(--parch-dk));}
+.cd-wrap{max-width:760px;margin:0 auto;padding:1.4rem 1.1rem 1.9rem;text-align:center;}
+.cd-clock{display:flex;gap:.6rem;justify-content:center;margin:.3rem 0 1rem;flex-wrap:wrap;}
+.cd2-box{background:var(--navy);color:#fff;border-radius:12px;padding:.6rem .9rem;min-width:66px;box-shadow:0 4px 14px rgba(22,41,74,.18);}
+.cd2-box .n{display:block;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.95rem;color:var(--gold-lt);line-height:1;}
+.cd2-box .l{display:block;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-soft);margin-top:.25rem;}
+.cd-intro{font-size:.95rem;color:var(--ink-soft);max-width:540px;margin:0 auto 1.3rem;line-height:1.5;}
+.cd-badge{display:none;background:var(--gold);color:#fff;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .6rem;border-radius:999px;margin-left:.45rem;vertical-align:middle;}
+.cd-timeline{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;text-align:left;}
+@media(max-width:640px){.cd-timeline{grid-template-columns:1fr;}}
+.cd-card{border:1px solid var(--line);border-radius:12px;background:#fff;padding:.85rem 1rem;}
+.cd-card .cd-meta{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.cd-card h4{font-family:'Cormorant Garamond',serif;font-weight:700;color:var(--navy);font-size:1.14rem;margin:.2rem 0 .35rem;}
+.cd-card p{font-size:.86rem;color:var(--ink-soft);margin:0;line-height:1.45;}
+.cd-card.locked{background:repeating-linear-gradient(135deg,#f6efe0,#f6efe0 11px,#f1e8d2 11px,#f1e8d2 22px);border-style:dashed;}
+.cd-card.locked h4{color:var(--ink-soft);font-style:italic;}
+.cd-card.cd-new{box-shadow:0 0 0 2px var(--gold-soft),0 6px 18px rgba(184,146,63,.22);}
+.cd-msg{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--navy);}
+</style>
+
+<!-- ════ THE COUNTDOWN ════ -->
+<div class="band" id="countdownSec">
+  <div class="banner">
+    <div class="scene" style="background:linear-gradient(100deg, transparent, transparent 26%, #ffd9a0 42%, #f3a866 60%, #e0795a 78%, #b8923f 100%);"></div>
+    <svg class="leaves" viewBox="0 0 90 110" preserveAspectRatio="none"><g fill="#6f7a3a" opacity="0.85"><path d="M0 0 Q40 8 60 50 Q35 30 0 28 Z"/><path d="M0 18 Q44 30 66 78 Q34 52 0 50 Z"/><path d="M0 40 Q38 56 56 100 Q30 76 0 76 Z"/></g></svg>
+    <div class="banner-content">
+      <div class="banner-icon"><svg width="26" height="26" viewBox="0 0 80 80"><use href="#compassG"/></svg></div>
+      <div class="banner-text"><h2>The Countdown</h2><div class="wv">≈≈≈</div></div>
+    </div>
+  </div>
+  <div class="cd-wrap">
+    <div id="bigCountdown" class="cd-clock"></div>
+    <p class="cd-intro">A new card unlocks here every week until we fly &mdash; pop back to see what&rsquo;s been revealed.<span id="cdBadge" class="cd-badge">New this week</span></p>
+    <div id="cdDrops" class="cd-timeline"></div>
+  </div>
+</div>
 
 <!-- ════ EXEC SUMMARY ════ -->
 <div class="band">
@@ -1318,6 +1358,80 @@
   </div>
 </div>
 
+<!-- ════ BALI LANGUAGE CHALLENGE ════ -->
+<style>
+#language{background:linear-gradient(180deg,var(--parch),var(--parch-dk));}
+.lang-wrap{max-width:820px;margin:0 auto;padding:1.3rem 1.1rem 1.9rem;}
+.lang-intro{font-size:.95rem;color:var(--ink-soft);text-align:center;max-width:560px;margin:0 auto 1.3rem;line-height:1.5;}
+.lang-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;}
+@media(max-width:640px){.lang-grid{grid-template-columns:1fr;}}
+.lang-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.9rem 1.05rem;}
+.lang-card h4{font-family:'Cormorant Garamond',serif;color:var(--navy);font-size:1.16rem;margin:0 0 .5rem;font-weight:700;}
+.phrase{padding:.4rem 0;border-bottom:1px dashed var(--line);}
+.phrase:last-child{border-bottom:0;}
+.phrase .en{color:var(--ink);font-weight:600;font-size:.9rem;}
+.phrase .id{color:var(--gold);font-weight:700;font-size:.9rem;}
+.phrase .pr{color:var(--ink-soft);font-style:italic;font-size:.79rem;display:block;margin-top:.08rem;}
+.lang-challenge{margin-top:1.3rem;background:#fff;border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;}
+.lang-challenge h4{font-family:'Cormorant Garamond',serif;color:var(--navy);font-size:1.24rem;margin:0 0 .2rem;font-weight:700;}
+.lang-challenge .sub-note{font-size:.85rem;color:var(--ink-soft);margin:0 0 .7rem;}
+#langWin{display:none;margin-top:.8rem;padding:.7rem .9rem;border-radius:10px;background:var(--palm);color:#fff;font-weight:600;text-align:center;}
+</style>
+<div class="band" id="language">
+  <div class="banner">
+    <div class="scene" style="background:linear-gradient(100deg, transparent, transparent 26%, #8fc7a8 44%, #4fa6a0 64%, #2c6b6b 84%, #1f3a5f 100%);"></div>
+    <svg class="leaves" viewBox="0 0 90 110" preserveAspectRatio="none"><g fill="#6f7a3a" opacity="0.85"><path d="M0 0 Q40 8 60 50 Q35 30 0 28 Z"/><path d="M0 18 Q44 30 66 78 Q34 52 0 50 Z"/><path d="M0 40 Q38 56 56 100 Q30 76 0 76 Z"/></g></svg>
+    <div class="banner-content">
+      <div class="banner-icon"><svg width="26" height="26" viewBox="0 0 80 80"><use href="#compassG"/></svg></div>
+      <div class="banner-text"><h2>Bali Language Challenge</h2><div class="wv">≈≈≈</div></div>
+    </div>
+  </div>
+  <div class="lang-wrap">
+    <p class="lang-intro">Let&rsquo;s see how many of these we can use on holiday! A few friendly words of Bahasa Indonesia go a long way &mdash; and the locals love it when you try.</p>
+    <div class="lang-grid">
+      <div class="lang-card">
+        <h4>👋 Greetings</h4>
+        <div class="phrase"><span class="en">Hello</span> &middot; <span class="id">Halo</span><span class="pr">HA-lo</span></div>
+        <div class="phrase"><span class="en">Good morning</span> &middot; <span class="id">Selamat pagi</span><span class="pr">seh-LAH-mat PAH-gee</span></div>
+        <div class="phrase"><span class="en">Good afternoon</span> &middot; <span class="id">Selamat siang</span><span class="pr">seh-LAH-mat SEE-ang</span></div>
+        <div class="phrase"><span class="en">Goodbye</span> &middot; <span class="id">Sampai jumpa</span><span class="pr">sum-PIE JOOM-pa</span></div>
+      </div>
+      <div class="lang-card">
+        <h4>😊 Be Polite</h4>
+        <div class="phrase"><span class="en">Thank you</span> &middot; <span class="id">Terima kasih</span><span class="pr">teh-REE-mah KAH-see</span></div>
+        <div class="phrase"><span class="en">You&rsquo;re welcome</span> &middot; <span class="id">Sama-sama</span><span class="pr">SAH-ma SAH-ma</span></div>
+        <div class="phrase"><span class="en">Please</span> &middot; <span class="id">Tolong</span><span class="pr">TOH-long</span></div>
+        <div class="phrase"><span class="en">Sorry</span> &middot; <span class="id">Maaf</span><span class="pr">mah-AHF</span></div>
+      </div>
+      <div class="lang-card">
+        <h4>🍽️ Food &amp; Drinks</h4>
+        <div class="phrase"><span class="en">Water</span> &middot; <span class="id">Air</span><span class="pr">AH-eer</span></div>
+        <div class="phrase"><span class="en">Delicious!</span> &middot; <span class="id">Enak!</span><span class="pr">EH-nack</span></div>
+        <div class="phrase"><span class="en">I would like&hellip;</span> &middot; <span class="id">Saya mau&hellip;</span><span class="pr">SYE-ah MAU</span></div>
+        <div class="phrase"><span class="en">The bill please</span> &middot; <span class="id">Minta bon, ya</span><span class="pr">MIN-ta bon ya</span></div>
+      </div>
+      <div class="lang-card">
+        <h4>🛍️ Shopping</h4>
+        <div class="phrase"><span class="en">How much?</span> &middot; <span class="id">Berapa?</span><span class="pr">beh-RAH-pa</span></div>
+        <div class="phrase"><span class="en">Too expensive!</span> &middot; <span class="id">Terlalu mahal!</span><span class="pr">ter-LAH-loo mah-HALL</span></div>
+      </div>
+      <div class="lang-card">
+        <h4>🌴 Fun Phrases</h4>
+        <div class="phrase"><span class="en">My name is&hellip;</span> &middot; <span class="id">Nama saya&hellip;</span><span class="pr">NAH-ma SYE-ah</span></div>
+        <div class="phrase"><span class="en">I like Bali</span> &middot; <span class="id">Saya suka Bali</span><span class="pr">SYE-ah SOO-ka Bali</span></div>
+        <div class="phrase"><span class="en">Beautiful!</span> &middot; <span class="id">Bagus!</span><span class="pr">BAH-goos</span></div>
+      </div>
+    </div>
+    <div class="lang-challenge">
+      <h4>⭐ Bali Challenge</h4>
+      <p class="sub-note">Tick these off on the trip &mdash; saved on your own device.</p>
+      <div id="langChallenge" class="pack"></div>
+      <div id="langWin">🇮🇩 You now know more useful Indonesian than most tourists. Bagus! 🎉</div>
+      <button id="lang-reset" class="poll-reset">Reset challenge</button>
+    </div>
+  </div>
+</div>
+
 <!-- ════ TRIP TOOLKIT ════ -->
 <div class="band">
   <div class="banner">
@@ -1346,6 +1460,36 @@
     </div>
     <div id="fx-out" class="fx-out"></div>
     <div id="fx-note" class="fx-note"></div>
+
+    <style>
+    .entry-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem;margin-bottom:.4rem;}
+    @media(max-width:640px){.entry-cards{grid-template-columns:1fr;}}
+    .entry-card{background:#fff;border:1px solid var(--line);border-radius:11px;padding:.75rem .9rem;}
+    .entry-card h4{font-family:'Cormorant Garamond',serif;color:var(--navy);font-size:1.08rem;margin:0 0 .3rem;font-weight:700;}
+    .entry-card p{font-size:.83rem;color:var(--ink-soft);margin:0;line-height:1.45;}
+    .entry-card a{color:var(--gold);font-weight:600;word-break:break-word;}
+    .entry-card.warn{background:#fbf3e3;border-color:var(--gold-soft);}
+    </style>
+    <h3 class="sub">Entry Essentials</h3>
+    <p style="font-size:0.9rem;color:var(--ink-soft);margin-bottom:0.9rem;">Two entry payments for Bali, plus the arrival card. All can be done online closer to the time &mdash; no rush now.</p>
+    <div class="entry-cards">
+      <div class="entry-card">
+        <h4>🛂 Visa on arrival</h4>
+        <p>UK passports need a Visa on Arrival: IDR 500,000 (about £24pp), 30-day single entry. Apply ahead as an e-VOA at <a href="https://www.imigrasi.go.id">imigrasi.go.id</a> for the e-gates, or pay at the airport.</p>
+      </div>
+      <div class="entry-card">
+        <h4>🌴 Bali tourist levy</h4>
+        <p>A separate IDR 150,000 (about £7pp) &mdash; all ages, once per trip. Pay at the official Love Bali portal: <a href="https://lovebali.baliprov.go.id">lovebali.baliprov.go.id</a>, then save the QR code.</p>
+      </div>
+      <div class="entry-card">
+        <h4>📝 e-Arrival card</h4>
+        <p>A free online form (customs + health in one). Complete it within 72 hours of arrival and show the QR code on landing to skip delays.</p>
+      </div>
+      <div class="entry-card warn">
+        <h4>⚠️ Avoid scams</h4>
+        <p>Only official sites ending in <strong>.go.id</strong> are genuine. Any .com or .org &ldquo;Bali levy&rdquo; site, sponsored ad or QR handed to you is a scam that overcharges.</p>
+      </div>
+    </div>
 
     <h3 class="sub">Packing Checklist</h3>
     <p style="font-size:0.9rem;color:var(--ink-soft);margin-bottom:0.9rem;">Saved on your own device — tick things off as you go.</p>
@@ -1806,6 +1950,8 @@
       'Check passports valid 6+ months beyond 13 Aug 2026',
       'Travel insurance arranged for all 12',
       'Indonesia e-VOA (apply within 90 days of arrival)',
+      'Pay Bali tourist levy via Love Bali — save QR (all 12)',
+      'Complete Indonesia e-Arrival card (within 72 hrs of arrival)',
       'Confirm The Line menu & pay SGD 200 deposit',
       'Order travel money (SGD & IDR) / tell bank',
       'Set up eSIMs or roaming',
@@ -1827,6 +1973,38 @@
       });
     }
     var rst=document.getElementById('admin-reset');
+    if(rst) rst.addEventListener('click',function(){ save({}); render(); });
+    render();
+  })();
+
+  // Bali language challenge (saved per device)
+  (function(){
+    var wrap=document.getElementById('langChallenge'); if(!wrap) return;
+    var KEY='ormerod_bali_lang_v1';
+    var items=[
+      'Say \u201cTerima kasih\u201d 10 times in one day',
+      'Order your own drink',
+      'Ask \u201cBerapa?\u201d in a shop',
+      'Say \u201cSelamat pagi\u201d at breakfast',
+      'Introduce yourself in Indonesian'
+    ];
+    function load(){ try{return JSON.parse(localStorage.getItem(KEY))||{};}catch(e){return {};} }
+    function save(v){ try{localStorage.setItem(KEY,JSON.stringify(v));}catch(e){} }
+    function render(){
+      var st=load(); wrap.innerHTML=''; var done=0;
+      items.forEach(function(it,i){
+        var on=!!st[i]; if(on) done++;
+        var row=document.createElement('label'); row.className='pack-row'+(on?' done':'');
+        row.innerHTML='<input type="checkbox"'+(on?' checked':'')+'><span>'+it+'</span>';
+        row.querySelector('input').addEventListener('change',function(e){
+          var s=load(); if(e.target.checked) s[i]=1; else delete s[i]; save(s); render();
+        });
+        wrap.appendChild(row);
+      });
+      var win=document.getElementById('langWin');
+      if(win) win.style.display = done===items.length ? 'block' : 'none';
+    }
+    var rst=document.getElementById('lang-reset');
     if(rst) rst.addEventListener('click',function(){ save({}); render(); });
     render();
   })();
@@ -1856,6 +2034,80 @@
       if(win) win.style.display = found===cells.length ? 'block' : 'none';
     }
     render();
+  })();
+</script>
+
+<script>
+  /* ── The Countdown: big live clock to departure ── */
+  (function(){
+    var el = document.getElementById('bigCountdown');
+    if(!el) return;
+    function render(){
+      var now = new Date();
+      var dep = new Date('2026-07-29T00:00:00');
+      var diff = dep - now;
+      if (diff <= 0){ el.innerHTML = '<div class="cd-msg">The adventure has begun 🌴</div>'; return; }
+      var d = Math.floor(diff/86400000);
+      var h = Math.floor(diff%86400000/3600000);
+      var m = Math.floor(diff%3600000/60000);
+      el.innerHTML =
+        '<div class="cd2-box"><span class="n">'+d+'</span><span class="l">Days</span></div>'+
+        '<div class="cd2-box"><span class="n">'+h+'</span><span class="l">Hrs</span></div>'+
+        '<div class="cd2-box"><span class="n">'+m+'</span><span class="l">Min</span></div>';
+    }
+    render();
+    setInterval(render, 30000);
+  })();
+
+  /* ── The Countdown: weekly reveal timeline ── */
+  (function(){
+    var grid = document.getElementById('cdDrops');
+    if(!grid) return;
+    var drops = [
+      {wk:'Week 1', date:'2026-06-23', icon:'🌅', teaser:'A clifftop evening to remember\u2026',
+       title:'Uluwatu at sunset',
+       body:'A clifftop temple perched 70m above the Indian Ocean, then the hypnotic Kecak fire dance as the sun drops. One of Bali\u2019s great evenings \u2014 we\u2019ll aim to arrive early and beat the crowds.'},
+      {wk:'Week 2', date:'2026-06-30', icon:'🍤', teaser:'What\u2019s cooking\u2026',
+       title:'A taste of Bali',
+       body:'Smoky satay lilit, crispy babi guling, fresh young coconuts, and a long beach-club lunch at Nusa Dua. With the villa kitchen we get lazy breakfasts too.'},
+      {wk:'Week 3', date:'2026-07-07', icon:'🛵', teaser:'Travel like a local\u2026',
+       title:'Getting around',
+       body:'Grab and Gojek are your friends for cheap, easy rides. Carry small rupiah notes, agree fares first, and a smile plus a \u201cterima kasih\u201d goes a long way.'},
+      {wk:'Week 4', date:'2026-07-14', icon:'🐒', teaser:'A mission for the children\u2026',
+       title:'Kids\u2019 corner: jungle hunt',
+       body:'A spot-it challenge for the four explorers \u2014 a monkey at Uluwatu, a gecko on the wall, a rice-paddy duck, and a temple offering. First to find all four wins.'},
+      {wk:'Week 5', date:'2026-07-21', icon:'🌊', teaser:'A big day out\u2026',
+       title:'Day trip: Nusa Penida',
+       body:'Turquoise water, the famous T-Rex cliff at Kelingking, and Crystal Bay for a snorkel. An early start, but worth every minute.'},
+      {wk:'Week 6', date:'2026-07-28', icon:'✈️', teaser:'Almost there\u2026',
+       title:'Wheels up \u2014 almost!',
+       body:'Bags nearly packed, passports checked, sun cream in. This time next week we\u2019re wheels-up to Singapore. Let the holiday begin.'}
+    ];
+    var now = new Date();
+    function fmt(d){ return new Date(d+'T00:00:00').toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'}); }
+    function daysTo(d){ return Math.ceil((new Date(d+'T00:00:00') - now)/86400000); }
+    var unlocked = 0, html = '';
+    drops.forEach(function(dr){
+      var open = now >= new Date(dr.date+'T00:00:00');
+      if(open){
+        unlocked++;
+        html += '<div class="cd-card"><div class="cd-meta">'+dr.wk+' \u00b7 '+dr.icon+'</div><h4>'+dr.title+'</h4><p>'+dr.body+'</p></div>';
+      } else {
+        var n = daysTo(dr.date);
+        html += '<div class="cd-card locked"><div class="cd-meta">'+dr.wk+'</div><h4>\uD83D\uDD12 '+dr.teaser+'</h4><p>Unlocks '+fmt(dr.date)+' \u00b7 in '+n+(n===1?' day':' days')+'</p></div>';
+      }
+    });
+    grid.innerHTML = html;
+    try {
+      var seen = parseInt(localStorage.getItem('cdSeen')||'0', 10);
+      if(unlocked > seen){
+        var badge = document.getElementById('cdBadge');
+        if(badge) badge.style.display = 'inline-block';
+        var cards = grid.querySelectorAll('.cd-card:not(.locked)');
+        if(cards.length) cards[cards.length-1].classList.add('cd-new');
+      }
+      localStorage.setItem('cdSeen', String(unlocked));
+    } catch(e){}
   })();
 </script>
 </body>
