@@ -751,22 +751,38 @@
   </div>
 </div>
 
+<style>
+  /* Chapter dividers */
+  .chapter{ background:var(--navy-deep); color:var(--parch); text-align:center; padding:2.3rem 1.2rem; border-top:3px solid var(--gold); border-bottom:3px solid var(--gold); }
+  .chapter .chapter-k{ display:block; font-family:'Cormorant Garamond',serif; font-size:0.72rem; letter-spacing:0.36em; text-transform:uppercase; color:var(--gold-lt); margin-bottom:0.4rem; }
+  .chapter h2{ font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,7vw,3rem); font-weight:700; color:#fff; margin:0; line-height:1; }
+  .chapter .chapter-sub{ display:block; margin-top:0.55rem; font-size:0.92rem; color:var(--gold-soft); letter-spacing:0.03em; }
+  .chapter .wv{ color:var(--gold); margin-top:0.6rem; opacity:0.85; letter-spacing:0.2em; }
+  /* Nav group labels */
+  .nav-group{ white-space:nowrap; align-self:center; color:var(--gold-lt); font-family:'Cormorant Garamond',serif; font-size:0.64rem; font-weight:700; letter-spacing:0.24em; text-transform:uppercase; padding:0 0.5rem 0 0.95rem; opacity:0.92; border-left:1px solid rgba(216,192,138,0.35); margin-left:0.15rem; }
+  .nav-group:first-child{ border-left:0; margin-left:0; padding-left:1.05rem; }
+</style>
 <!-- NAV -->
 <nav id="nav">
-  <a href="#countdownSec">The Countdown</a>
-  <a href="#exec">Exec Summary</a>
-  <a href="#flights">Flight Schedule</a>
-  <a href="#itinerary">Flight Itinerary</a>
-  <a href="#singapore">Singapore Hotel</a>
+  <span class="nav-group">Before You Go</span>
+  <a href="#countdownSec">Countdown</a>
+  <a href="#exec">Summary</a>
+  <a href="#flights">Flights</a>
+  <a href="#itinerary">Journey Out</a>
+  <span class="nav-group">Singapore</span>
+  <a href="#singapore">Shangri-La</a>
+  <span class="nav-group">Bali</span>
   <a href="#villa">The Villa</a>
-  <a href="#bali">Bali Itinerary</a>
+  <a href="#bali">Itinerary</a>
   <a href="#weather">Weather &amp; Travel</a>
-  <a href="#showcase">Bali in Motion</a>
-  <a href="#ideas">Research &amp; Ideas</a>
-  <a href="#changi">Singapore Hotel (2)</a>
+  <a href="#showcase">In Motion</a>
+  <a href="#ideas">Ideas</a>
+  <span class="nav-group">Coming Home</span>
+  <a href="#changi">Changi</a>
+  <span class="nav-group">Toolkit</span>
   <a href="#language">Language</a>
-  <a href="#toolkit">Trip Toolkit</a>
-  <a href="#finance">Financial Summary</a>
+  <a href="#toolkit">Essentials</a>
+  <a href="#finance">Finance</a>
 </nav>
 <div id="today-banner" class="today-banner" style="display:none"></div>
 
@@ -790,6 +806,8 @@
 .cd-card.cd-new{box-shadow:0 0 0 2px var(--gold-soft),0 6px 18px rgba(184,146,63,.22);}
 .cd-msg{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--navy);}
 </style>
+
+<div class="chapter" id="ch-before"><span class="chapter-k">Chapter One</span><h2>Before You Go</h2><span class="chapter-sub">Getting ready to fly</span><div class="wv">≈≈≈</div></div>
 
 <!-- ════ THE COUNTDOWN ════ -->
 <div class="band" id="countdownSec">
@@ -921,11 +939,27 @@
     </div>
     <div class="incl">
       <p><b>Baggage</b> — Checked 25kg per person, max 158cm linear dimensions. Cabin 1 piece, max 7kg / 115cm.</p>
-      <p><b>London hotel</b> — Radisson Hotel &amp; Conference Centre Heathrow, 29 July. Parking via Holiday Extras through 13 Aug + Late Return Cover.</p>
     </div>
-    <p class="note">London hotel — three family rooms booked at the Radisson for 29 July.</p>
+
+    <h3 class="sub">The Night Before — Heathrow</h3>
+    <div class="htl">
+      <div class="htl-h"><div class="name">Radisson Hotel &amp; Conference Centre</div><div class="loc">London Heathrow &middot; night before departure</div></div>
+      <div class="htl-dates">
+        <div><div class="k">Check-in</div><div class="v">29 Jul</div></div>
+        <div><div class="k">To airport</div><div class="v">30 Jul &middot; T2</div></div>
+        <div><div class="k">Rooms</div><div class="v">3 family</div></div>
+      </div>
+    </div>
+    <div class="incl">
+      <p><b>Holiday Extras &middot; Stay &amp; Park</b> — one relaxed start: stay the night, then a short hop to Terminal 2 for SQ317, no long early-morning drive.</p>
+      <p>The car stays parked through <b>13 August</b> — no second airport run, and it&rsquo;s waiting for us when we land back.</p>
+      <p><b>Late Return Cover</b> included, covering the arrival back at Heathrow on 13 August.</p>
+    </div>
+    <p class="note">Booked &amp; paid &middot; three family rooms at the Radisson for 29 July.</p>
   </div>
 </div>
+
+<div class="chapter" id="ch-singapore"><span class="chapter-k">Chapter Two</span><h2>Singapore</h2><span class="chapter-sub">Shangri-La &middot; 31 July – 2 August</span><div class="wv">≈≈≈</div></div>
 
 <!-- ════ SINGAPORE HOTEL ════ -->
 <div class="band">
@@ -982,6 +1016,8 @@
     </div>
   </div>
 </div>
+
+<div class="chapter" id="ch-bali"><span class="chapter-k">Chapter Three</span><h2>Bali</h2><span class="chapter-sub">Nusa Dua &middot; 2 – 12 August</span><div class="wv">≈≈≈</div></div>
 
 <!-- ════ THE VILLA ════ -->
 <div class="band">
@@ -1325,6 +1361,8 @@
   </div>
 </div>
 
+<div class="chapter" id="ch-home"><span class="chapter-k">Chapter Four</span><h2>Coming Home</h2><span class="chapter-sub">Changi &middot; 12 – 13 August</span><div class="wv">≈≈≈</div></div>
+
 <!-- ════ SINGAPORE HOTEL (2) ════ -->
 <div class="band">
   <div class="banner">
@@ -1357,6 +1395,8 @@
     <p class="note">Confirmation numbers — Ian &amp; Sandra: 89707263 · Laura &amp; Elliot: 23345794 · Nick &amp; Claire: 43077814</p>
   </div>
 </div>
+
+<div class="chapter" id="ch-toolkit"><span class="chapter-k">Chapter Five</span><h2>Trip Toolkit</h2><span class="chapter-sub">Words, tools &amp; the numbers</span><div class="wv">≈≈≈</div></div>
 
 <!-- ════ BALI LANGUAGE CHALLENGE ════ -->
 <style>
@@ -2065,36 +2105,38 @@
     if(!grid) return;
     var drops = [
       {wk:'Week 1', date:'2026-06-23', icon:'🌅', teaser:'A clifftop evening to remember\u2026',
-       title:'Uluwatu at sunset',
+       title:'Uluwatu at sunset', link:'#day9', linkLabel:'See Day 9 \u203a',
        body:'A clifftop temple perched 70m above the Indian Ocean, then the hypnotic Kecak fire dance as the sun drops. One of Bali\u2019s great evenings \u2014 we\u2019ll aim to arrive early and beat the crowds.'},
       {wk:'Week 2', date:'2026-06-30', icon:'🍤', teaser:'What\u2019s cooking\u2026',
-       title:'A taste of Bali',
+       title:'A taste of Bali', link:'#bali', linkLabel:'See the itinerary \u203a',
        body:'Smoky satay lilit, crispy babi guling, fresh young coconuts, and a long beach-club lunch at Nusa Dua. With the villa kitchen we get lazy breakfasts too.'},
       {wk:'Week 3', date:'2026-07-07', icon:'🛵', teaser:'Travel like a local\u2026',
-       title:'Getting around',
+       title:'Getting around', link:'#weather', linkLabel:'Weather &amp; Travel \u203a',
        body:'Grab and Gojek are your friends for cheap, easy rides. Carry small rupiah notes, agree fares first, and a smile plus a \u201cterima kasih\u201d goes a long way.'},
       {wk:'Week 4', date:'2026-07-14', icon:'🐒', teaser:'A mission for the children\u2026',
-       title:'Kids\u2019 corner: jungle hunt',
+       title:'Kids\u2019 corner: jungle hunt', link:'#bingo', linkLabel:'Play the bingo \u203a',
        body:'A spot-it challenge for the four explorers \u2014 a monkey at Uluwatu, a gecko on the wall, a rice-paddy duck, and a temple offering. First to find all four wins.'},
       {wk:'Week 5', date:'2026-07-21', icon:'🌊', teaser:'A big day out\u2026',
-       title:'Day trip: Nusa Penida',
+       title:'Day trip: Nusa Penida', link:'#ideas', linkLabel:'More Bali ideas \u203a',
        body:'Turquoise water, the famous T-Rex cliff at Kelingking, and Crystal Bay for a snorkel. An early start, but worth every minute.'},
       {wk:'Week 6', date:'2026-07-28', icon:'✈️', teaser:'Almost there\u2026',
-       title:'Wheels up \u2014 almost!',
+       title:'Wheels up \u2014 almost!', link:'#flights', linkLabel:'See the flights \u203a',
        body:'Bags nearly packed, passports checked, sun cream in. This time next week we\u2019re wheels-up to Singapore. Let the holiday begin.'}
     ];
     var now = new Date();
     function fmt(d){ return new Date(d+'T00:00:00').toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'}); }
     function daysTo(d){ return Math.ceil((new Date(d+'T00:00:00') - now)/86400000); }
-    var unlocked = 0, html = '';
+    var unlocked = 0, html = '', nextFlagged = false;
     drops.forEach(function(dr){
       var open = now >= new Date(dr.date+'T00:00:00');
       if(open){
         unlocked++;
-        html += '<div class="cd-card"><div class="cd-meta">'+dr.wk+' \u00b7 '+dr.icon+'</div><h4>'+dr.title+'</h4><p>'+dr.body+'</p></div>';
+        var link = dr.link ? '<a class="tagday" style="margin-top:0.7rem;display:inline-block" href="'+dr.link+'">'+dr.linkLabel+'</a>' : '';
+        html += '<div class="cd-card"><div class="cd-meta">'+dr.wk+' \u00b7 '+dr.icon+'</div><h4>'+dr.title+'</h4><p>'+dr.body+'</p>'+link+'</div>';
       } else {
-        var n = daysTo(dr.date);
-        html += '<div class="cd-card locked"><div class="cd-meta">'+dr.wk+'</div><h4>\uD83D\uDD12 '+dr.teaser+'</h4><p>Unlocks '+fmt(dr.date)+' \u00b7 in '+n+(n===1?' day':' days')+'</p></div>';
+        var when = nextFlagged ? 'Coming soon' : 'Unlocks next week';
+        nextFlagged = true;
+        html += '<div class="cd-card locked"><div class="cd-meta">'+dr.wk+'</div><h4>\uD83D\uDD12 '+dr.teaser+'</h4><p>'+when+'</p></div>';
       }
     });
     grid.innerHTML = html;
