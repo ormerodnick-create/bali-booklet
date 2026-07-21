@@ -1047,6 +1047,60 @@
       <p>SGD 200 deposit required in advance — Nick to pay once the menu is confirmed</p>
     </div>
     <style>
+    .linemenu{ border:1px solid var(--line); border-radius:12px; background:#fff; margin:0.3rem 0 0.2rem; overflow:hidden; }
+    .linemenu>summary{ list-style:none; cursor:pointer; padding:0.85rem 1rem; background:var(--navy); color:#fff; font-family:'Cormorant Garamond',serif; font-weight:700; font-size:1.06rem; display:flex; justify-content:space-between; align-items:center; }
+    .linemenu>summary::-webkit-details-marker{ display:none; }
+    .linemenu>summary .chev{ color:var(--gold-lt); transition:transform 0.2s; }
+    .linemenu[open]>summary .chev{ transform:rotate(180deg); }
+    .menu-in{ padding:1rem 1.1rem; }
+    .menu-meta{ font-size:0.84rem; color:var(--ink-soft); margin:0 0 0.5rem; }
+    .menu-key{ font-size:0.72rem; color:var(--ink-soft); background:var(--parch); border-radius:8px; padding:0.5rem 0.7rem; line-height:1.55; margin-bottom:0.9rem; }
+    .mstn{ font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); font-weight:700; margin:0.9rem 0 0.28rem; border-top:1px dashed var(--line); padding-top:0.6rem; }
+    .mstn:first-of-type{ border-top:0; padding-top:0; margin-top:0; }
+    .mdish{ font-size:0.85rem; color:var(--ink); line-height:1.55; margin:0; }
+    .mdish .al{ color:var(--ink-soft); font-size:0.76rem; }
+    </style>
+    <details class="linemenu">
+      <summary><span>🍽️ View the full buffet menu</span><span class="chev">▾</span></summary>
+      <div class="menu-in">
+        <p class="menu-meta"><b>Dinner Buffet 2026</b> · the actual menu for our dates (runs 13 Jul – 5 Aug) · SGD 98++ per adult.</p>
+        <div class="menu-key">Allergen key: A alcohol · G gluten · D dairy · E egg · N nuts · P pork · S soya · T tree nuts · SE seafood · SH shellfish · V vegetarian. <em>Items rotate and may change.</em></div>
+
+        <div class="mstn">Seafood on Ice (SH)</div>
+        <p class="mdish">Boston lobster, snow crab, sea prawn, half-shell scallop, blue mussel, white clam.</p>
+        <div class="mstn">Sashimi (SE)</div>
+        <p class="mdish">Tuna, salmon, tako, ama ebi.</p>
+        <div class="mstn">Sushi</div>
+        <p class="mdish">Maki: nasi lemak <span class="al">(E,G,SE,SH)</span>, cheese ebi fry <span class="al">(D,E,SH)</span>, California roll <span class="al">(E,SE,SH)</span>. Sushi: tamago <span class="al">(E)</span>, inari <span class="al">(S)</span>, chuka kurage gunkan <span class="al">(SE)</span>.</p>
+        <div class="mstn">Japanese Live Station</div>
+        <p class="mdish">Unagi donburi with onsen egg, seaweed &amp; pickle.</p>
+        <div class="mstn">Wellness Salad Bar (V)</div>
+        <p class="mdish">Mixed leaves, cucumber, cherry tomato, Kalamata olives, edamame, sweet corn, marinated eggplant, feta <span class="al">(D)</span>, tuna <span class="al">(SE)</span>, semi-dried tomato — with a full range of dressings, olive oils &amp; vinegars.</p>
+        <div class="mstn">Salads</div>
+        <p class="mdish">Kerabu mango with crispy crystal prawn <span class="al">(N,SH)</span>; yum woonsen talay <span class="al">(G,N,SE,SH)</span>; poached chicken roulade with peas &amp; sweet onion relish.</p>
+        <div class="mstn">Charcuterie</div>
+        <p class="mdish">Rosette salami <span class="al">(P)</span>, chicken lyoner mushroom, salchichón <span class="al">(P)</span>, duck rillette &amp; pork pâté with kumquat chutney <span class="al">(P)</span>.</p>
+        <div class="mstn">European Cheese (D)</div>
+        <p class="mdish">Gorgonzola, brie, emmental, manchego, with nuts <span class="al">(N,T)</span>, dried fruit, crackers &amp; grapes.</p>
+        <div class="mstn">Carving Station</div>
+        <p class="mdish">Bone-in lamb leg percik with lime coconut sauce; ikan bakar <span class="al">(SE)</span>; rosemary soft roll <span class="al">(D,E,G)</span>.</p>
+        <div class="mstn">Western Mains</div>
+        <p class="mdish">Clam chowder <span class="al">(D,SH)</span>, char-grilled Kurobuta pork <span class="al">(A,E,G,P,S)</span>, braised beef brisket in red wine <span class="al">(A)</span>, seafood papillote <span class="al">(A,D,SH)</span>, creamy mushroom penne <span class="al">(D,G,V)</span>, Lyonnaise potatoes <span class="al">(D,V)</span>, corn ribs &amp; baby carrot with feta <span class="al">(D,T,V)</span>.</p>
+        <div class="mstn">Penang &amp; Malaysian Live</div>
+        <p class="mdish">Penang fruit rojak <span class="al">(G,N,S,SH)</span>, popiah &amp; kueh pie tee <span class="al">(E,G,N,S,SH)</span>, char koay teow with prawn <span class="al">(E,G,P,S,SE,SH)</span>, Penang lobak <span class="al">(E,G,P,SE,SH)</span>, oyster omelette.</p>
+        <div class="mstn">Malaysian Delights</div>
+        <p class="mdish">Nasi minyak <span class="al">(D)</span>, beef wagyu rendang tok, nyonya fried chicken <span class="al">(E,G)</span>, sambal squid <span class="al">(SE,SH)</span>, tau yu bak braised pork belly <span class="al">(G,P,S)</span>, kam heong mud crab <span class="al">(SH)</span>.</p>
+        <div class="mstn">Soup · Satay · Noodles</div>
+        <p class="mdish">Duck soup with pickled mustard; chicken &amp; beef satay with peanut sauce <span class="al">(N)</span>; Penang prawn noodle soup, asam laksa, vegetable noodle soup.</p>
+        <div class="mstn">Chinese BBQ</div>
+        <p class="mdish">Roasted "dang gui" duck; roasted pork belly <span class="al">(P)</span>.</p>
+        <div class="mstn">Indian</div>
+        <p class="mdish">Yellow dhal tadka <span class="al">(V)</span>, chicken korma <span class="al">(D,T)</span>, dum ka aloo <span class="al">(V)</span>, paneer masala <span class="al">(D,V)</span>, Goan fish curry <span class="al">(D,SE)</span>, Chennai veg biryani <span class="al">(D,T,V)</span>; naan <span class="al">(D,E,G)</span>; tandoori chicken thigh <span class="al">(D)</span>, malai broccoli <span class="al">(D,T)</span>, onion pakora <span class="al">(G,V)</span>, papadum; mamak pasembur <span class="al">(E,G,N,SH)</span>.</p>
+        <div class="mstn">Sweet Treats</div>
+        <p class="mdish">Whole cakes (NY cheesecake, chocolate truffle, ondeh-ondeh gula melaka, black forest); pastries (crème brûlée, brownie, fruit tartlet, choux craquelin); pandan chiffon, durian mousse; local kueh (rainbow lapis, ondeh-ondeh, ubi bingka, kueh salat); ice cream, gelato &amp; sorbet; pulut hitam &amp; pisang goreng; ice kacang &amp; chendol; tropical fruits.</p>
+      </div>
+    </details>
+    <style>
     .sgt-day{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1rem 1.1rem;margin-bottom:.9rem;}
     .sgt-day h4{font-family:'Cormorant Garamond',serif;color:var(--navy);font-size:1.16rem;font-weight:700;margin:0 0 .55rem;}
     .sgt-row{display:flex;gap:.7rem;padding:.42rem 0;border-top:1px dashed var(--line);}
